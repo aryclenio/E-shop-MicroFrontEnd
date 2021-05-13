@@ -12,6 +12,7 @@ export default () => {
         <BrowserRouter>
           <Switch>
             <Route exact path="/pricing" component={Pricing} />
+
             <Route path="/" component={Landing} />
           </Switch>
         </BrowserRouter>
