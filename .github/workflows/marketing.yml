@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'packages/cmarketing/**'
+      - 'packages/marketing/**'
 
 defaults:
   run:
