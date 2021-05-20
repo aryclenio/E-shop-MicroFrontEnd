@@ -1,7 +1,8 @@
 import { createGenerateClassName, StylesProvider } from '@material-ui/styles';
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
+import AuthApp from './components/AuthApp';
 import MarketingApp from './components/MarketingApp';
 
 export default () => {
@@ -13,6 +14,10 @@ export default () => {
       <StylesProvider generateClassName={GenerateClassName}>
         <div>
           <Header />
+          <Switch>
+            <Route path="/auth" component={AuthApp} />
+            <Route path="/" component={MarketingApp} />
+          </Switch>
           <MarketingApp />
         </div>
       </StylesProvider>
